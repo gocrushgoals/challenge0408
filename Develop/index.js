@@ -30,6 +30,12 @@ const questions = [
       name: 'Usage',
       message: 'Describe how you can use this application',
       
+    },    
+    {
+      type: 'input',
+      name: 'contribute',
+      message: 'Please provide guidelines for contributing.',
+ 
     },
     {
       type: 'list',
@@ -57,6 +63,19 @@ const questions = [
       name: 'Username',
       message: 'What is your GitHub username?',
       
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: '(required) What is your email address?',
+      validate: emailInput => {
+          if (emailInput) {
+            return true;
+          } else {
+            console.log('Please enter your email!');
+            return false;
+          }
+      }
     },
   ]
 
