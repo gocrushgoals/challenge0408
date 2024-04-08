@@ -60,13 +60,13 @@ const questions = [
     },
     {
       type: 'input',
-      name: 'Username',
+      name: 'userName',
       message: 'What is your GitHub username?',
       
     },
     {
       type: 'input',
-      name: 'email',
+      name: 'userEmail',
       message: '(required) What is your email address?',
       validate: emailInput => {
           if (emailInput) {

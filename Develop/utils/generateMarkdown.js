@@ -3,7 +3,7 @@ function generateMarkdown(data) {
   return `
 # Project Title
 ${data.title}
-${data.getLicense}
+${data.license}
 
 # Description
 ${data.description}
@@ -12,7 +12,7 @@ ${data.description}
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#installation)
-- [Contributing](#contributing)
+- [Contribute](#contribute)
 - [Tests](#tests)
 - [Questions](#contact-information)
   
@@ -27,7 +27,7 @@ ${data.license}
 * As this license list was not comprehensive, if you need another license, use the contact information below to ask for license to be added. 
 
 ## Contributing 
-${data.contributing}
+${data.contribute}
 
 ## Tests
 ${data.tests}
