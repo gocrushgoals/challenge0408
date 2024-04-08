@@ -83,28 +83,22 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, err => {
-    if(err) throw err;
-    console.log('Writing the README.md file is complete. Have a look at it!');
+  fs.writeFile(fileName, generateMarkdown(data), function (err) {
+    if (err) {
+        return console.log(err);
+    }
   });
 }
-
 // TODO: Create a function to initialize app
 
 function init() {
-  return inquirer.prompt(questions);
+  inquirer.prompt(questions).then((data) => {
+      console.log(JSON.stringify(data, null, ""));
+      data.getLicense = getLicense(data.license);
+      writeToFile("./README/README.md", data);
+  });
 }
 
+
 // Function call to initialize app
-init()
-
-.then(userAnswers => {
-
-  return generateMarkdown(userAnswers);
-})
-.then(markdownContent => {
-writeToFile(`C:\Users\krist\OneDrive\Documents\GitHub\challenge0408\Develop\generatereadme.md`, markdownContent);
-})
-.catch(err => {
-  console.log('The error is: ', err);
-});
+init();
