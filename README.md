@@ -11,10 +11,11 @@ This application was created using node.js to generate professional README.md do
 
 ## Live Screen Recording of Application Functionality
 
-
+https://github.com/gocrushgoals/challenge0408/assets/157322992/fb391921-a03b-4f7e-8a82-f7ba70bd9fcb
 
 ## Screenshots
 
+![image](https://github.com/gocrushgoals/challenge0408/assets/157322992/df2218d3-5aa9-406f-b547-e43377cc7946)
 
 ## Technologies Used
 
