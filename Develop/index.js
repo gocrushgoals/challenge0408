@@ -27,7 +27,7 @@ const questions = [
     },
     {
       type: 'input',
-      name: 'Usage',
+      name: 'usage',
       message: 'Describe how you can use this application',
       
     },    
@@ -94,11 +94,10 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions).then((data) => {
       console.log(JSON.stringify(data, null, ""));
-      data.getLicense = getLicense(data.license);
+      // data.getLicense = getLicense(data.license);
       writeToFile("./README/README.md", data);
   });
 }
-
 
 // Function call to initialize app
 init();
